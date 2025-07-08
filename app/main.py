@@ -1,4 +1,6 @@
 from llama_cpp import Llama
+from MemoryState import MemoryState
+
 import os
 import sys
 
@@ -32,21 +34,24 @@ if __name__ == "__main__":
 
     print("LLM loaded successfully! Type 'exit' or 'quit' to end.\n")
 
+    memory = MemoryState()
+
     while True:
         prompt = input("You: ")
         if prompt.lower() in {"exit", "quit"}:
             break
         
-        formatted_prompt = f"<|user|>{prompt}<|end|><|assistant|>"
+        formatted_prompt = memory.build_prompt(prompt)
         
         output = llm(
             formatted_prompt, 
-            max_tokens=150,
             stop=["<|end|>", "<|user|>"],
             temperature=0.7
         )
         
         response = output["choices"][0]["text"].strip()
-        print("LLM:", response)
+        print("\nLLM:", response)
+
+        memory.add_exchange(prompt, response)
 
 

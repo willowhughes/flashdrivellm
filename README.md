@@ -10,12 +10,6 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
    cd flashdrivellm
    ```
 
-**Dev note: create virtual environment (recommended):**
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate  # on Windows
-   ```
-
 2. **Download the model:**
    - Download the model file (~3GB): 
      [microsoft_Phi-4-mini-instruct-Q6_K_L.gguf](https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/main/microsoft_Phi-4-mini-instruct-Q6_K_L.gguf)
@@ -43,6 +37,13 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
 
 Simply run `python main.py` and start chatting! Type `exit` or `quit` to end the session.
 
-## Note
+## Dev Notes
 
-The model file is not included in this repository due to its size (3GB). You'll need to download it separately as described above.
+- The model file is not included in this repository due to its size (3GB). You'll need to download it separately as described above.
+- <create virtual environment (recommended):
+   ```bash
+   python -m venv venv
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   venv\Scripts\activate  # on Windows
+   ```
+- future: pyinstaller --onedir --name "FlashDriveLLM" app/main.py
