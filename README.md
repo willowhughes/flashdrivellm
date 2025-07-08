@@ -1,6 +1,6 @@
 # Flash Drive LLM
 
-A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline.
+A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline wth all dependancies bundled.
 
 ## Setup
 
@@ -13,9 +13,17 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
 2. **Download the model:**
    - Download the model file (~3GB): 
      [microsoft_Phi-4-mini-instruct-Q6_K_L.gguf](https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/main/microsoft_Phi-4-mini-instruct-Q6_K_L.gguf)
-   - Place it in: `llm_model/`
 
-3. **Run the chatbot:**
+3. **Put it in the right place:**
+   ```
+   flashdrivellm/
+   ├── app/
+   ├── llm_model/
+   │   └── microsoft_Phi-4-mini-instruct-Q6_K_L.gguf  ← Here!
+   └── README.md
+   ```
+
+4. **Run the chatbot:**
    ```bash
    python main.py
    ```
@@ -36,6 +44,13 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
 ## Usage
 
 Simply run `python main.py` and start chatting! Type `exit` or `quit` to end the session.
+
+## Pro Tips
+
+- **Copy-paste works!** Paste code, long text, whatever
+- **Multi-line input:** End a line with `\` to continue typing
+- **Remember conversations:** It keeps context throughout your session
+- **Works offline:** Zero internet required once set up
 
 ## Dev Notes
 
