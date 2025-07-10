@@ -1,6 +1,6 @@
 # Flash Drive LLM
 
-A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline wth all dependancies bundled.
+A portable LLM chatbot using guanaco-7b-uncensored model that you can run offline wth all dependancies bundled.
 
 ## Setup
 
@@ -12,14 +12,14 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
 
 2. **Download the model:**
    - Download the model file (~3GB): 
-     [microsoft_Phi-4-mini-instruct-Q6_K_L.gguf](https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/main/microsoft_Phi-4-mini-instruct-Q6_K_L.gguf)
+     [guanaco-7b-uncensored.Q4_K_M.gguf](https://huggingface.co/TheBloke/Guanaco-7B-Uncensored-GGUF/blob/main/guanaco-7b-uncensored.Q4_K_M.gguf)
 
 3. **Put it in the right place:**
    ```
    flashdrivellm/
    ├── app/
    ├── llm_model/
-   │   └── microsoft_Phi-4-mini-instruct-Q6_K_L.gguf  ← Here!
+   │   └── guanaco-7b-uncensored.Q4_K_M.gguf  ← Here!
    └── README.md
    ```
 
@@ -36,14 +36,14 @@ A portable LLM chatbot using Microsoft Phi-4 Mini model that you can run offline
 
 ## Model Information
 
-- **Model**: Microsoft Phi-4 Mini Instruct
-- **Quantization**: Q6_K_L (good balance of quality vs size)
-- **Size**: ~3GB
-- **Context Length**: 2048 tokens
+- **Model**: guanaco-7b-uncensored.Q4_K_M.gguf
+- **Quantization**: Q4_K_M
+- **Size**: ~4GB
+- **Context Length**: 4096 tokens
 
 ## Usage
 
-Simply run `python main.py` and start chatting! Type `exit` or `quit` to end the session.
+Simply run `python main.py` and start chatting! Type `/exit` or `/quit` to end the session.
 
 ## Pro Tips
 
