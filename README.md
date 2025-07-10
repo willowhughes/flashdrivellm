@@ -43,7 +43,11 @@ A portable LLM chatbot using guanaco-7b-uncensored model that you can run offlin
 
 ## Usage
 
-Simply run `python main.py` and start chatting! Type `/exit` or `/quit` to end the session.
+- Simply run `python main.py` and start chatting! Type `/exit` or `/quit` to end the session.
+- for an exe you'll need to run the command '''bash
+   pyinstaller --name FlashDriveLLM --onedir app/main.py
+   ```
+   and then manually move the folder ..\flashdrivellm\venv\Lib\site-packages\llama_cpp into ..\FlashDriveLLM\dist\FlashDriveLLM\_internal
 
 ## Pro Tips
 
